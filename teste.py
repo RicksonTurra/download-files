@@ -37,10 +37,7 @@ def download_files():
         Returns
         -------
         None
-        """
-        
-        
-        
+        """        
         
         name = link.split('/')
         name = sys.argv[1] + "/" + name[-1]
@@ -51,6 +48,13 @@ def download_files():
             try:
                 with tqdm.wrapattr(open(name, 'wb'), "write",miniters=1,
                 total=int(response.headers.get('content-length', 0))) as output_img:
+                    """
+                    Returns
+                    -------
+                    Response status, link and OK
+                    >>>https://cdn-9.motorsport.com/images/mgl/24vA3r46/s500/max-verstappen-red-bull-racing-1.webp
+                    200 https://cdn-9.motorsport.com/images/mgl/24vA3r46/s500/max-verstappen-red-bull-racing-1.webp OK
+                    """
                     for chunk in response.iter_content(chunk_size=4096):
                         output_img.write(chunk)
                 return "{result} {address} OK".format(result=response.status_code, address=link)        
