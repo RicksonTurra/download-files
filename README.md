@@ -1,6 +1,6 @@
 # Download-files
 
-Download-files is a program used to download files from a page on the internet.
+Download-files is a program used to download files from pages on the internet.
 
 ## Instalation
 
@@ -12,6 +12,7 @@ pip install -r requirements.txt
 ## Usage
 
 Python 3.9.5
+The file input.txt contains links to have files downloaded from. Add as many as you wish with a new line separating each link.
 Provide a complete path for the directory to which files should be downloaded.
 
 ```bash
