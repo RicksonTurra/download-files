@@ -82,7 +82,7 @@ try:
                 print("Directory provided to save files does not exist")
                 sys.exit(1)
         except IndexError:
-            print("You did not specify a file")
+            print("You did not specify a directory to save files")
             sys.exit(1)
 
         download_files()
