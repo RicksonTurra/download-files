@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 ## Usage
 
-Python 3.9.5.
+Python 3.9.5
 
 The file input.txt contains links to have files downloaded from. Add as many as you wish with a new line separating each link.
 Provide a complete path for the directory to which files should be downloaded.
