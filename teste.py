@@ -53,7 +53,7 @@ def download_files():
                 total=int(response.headers.get('content-length', 0))) as output_img:
                     for chunk in response.iter_content(chunk_size=4096):
                         output_img.write(chunk)
-                return "{result} OK".format(result=response.status_code)        
+                return "{result} {address} OK".format(result=response.status_code, address=link)        
             except Exception as e:
                 print(e.__str__)
                 pass
